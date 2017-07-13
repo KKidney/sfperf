@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<!--Phoronix Test Suite v7.2.1-->
+<PhoronixTestSuite>
+  <SuiteInformation>
+    <Title>SFPerf</Title>
+    <Version>1.0.0</Version>
+    <TestType>Other</TestType>
+    <Description>Set of tests for SF hardware</Description>
+    <Maintainer>kkidney</Maintainer>
+  </SuiteInformation>
+  <Execute>
+    <Test>pts/aio-stress-1.1.1</Test>
+    <Arguments>-o 2</Arguments>
+    <Description>Test: Random Write</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/cachebench-1.1.0</Test>
+    <Arguments>-r</Arguments>
+    <Description>Test: Read</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/cachebench-1.1.0</Test>
+    <Arguments>-w</Arguments>
+    <Description>Test: Write</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/cachebench-1.1.0</Test>
+    <Arguments>-b</Arguments>
+    <Description>Test: Read / Modify / Write</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 4k -s 512M -i0 #WRITE</Arguments>
+    <Description>Record Size: 4Kb - File Size: 512MB - Disk Test: Write Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 4k -s 512M -i0 -i1 #READ</Arguments>
+    <Description>Record Size: 4Kb - File Size: 512MB - Disk Test: Read Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 4k -s 2048M -i0 #WRITE</Arguments>
+    <Description>Record Size: 4Kb - File Size: 2GB - Disk Test: Write Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 4k -s 2048M -i0 -i1 #READ</Arguments>
+    <Description>Record Size: 4Kb - File Size: 2GB - Disk Test: Read Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 4k -s 4096M -i0 #WRITE</Arguments>
+    <Description>Record Size: 4Kb - File Size: 4GB - Disk Test: Write Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 4k -s 4096M -i0 -i1 #READ</Arguments>
+    <Description>Record Size: 4Kb - File Size: 4GB - Disk Test: Read Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 4k -s 8192M -i0 #WRITE</Arguments>
+    <Description>Record Size: 4Kb - File Size: 8GB - Disk Test: Write Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 4k -s 8192M -i0 -i1 #READ</Arguments>
+    <Description>Record Size: 4Kb - File Size: 8GB - Disk Test: Read Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 64k -s 512M -i0 #WRITE</Arguments>
+    <Description>Record Size: 64Kb - File Size: 512MB - Disk Test: Write Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 64k -s 512M -i0 -i1 #READ</Arguments>
+    <Description>Record Size: 64Kb - File Size: 512MB - Disk Test: Read Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 64k -s 2048M -i0 #WRITE</Arguments>
+    <Description>Record Size: 64Kb - File Size: 2GB - Disk Test: Write Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 64k -s 2048M -i0 -i1 #READ</Arguments>
+    <Description>Record Size: 64Kb - File Size: 2GB - Disk Test: Read Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 64k -s 4096M -i0 #WRITE</Arguments>
+    <Description>Record Size: 64Kb - File Size: 4GB - Disk Test: Write Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 64k -s 4096M -i0 -i1 #READ</Arguments>
+    <Description>Record Size: 64Kb - File Size: 4GB - Disk Test: Read Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 64k -s 8192M -i0 #WRITE</Arguments>
+    <Description>Record Size: 64Kb - File Size: 8GB - Disk Test: Write Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 64k -s 8192M -i0 -i1 #READ</Arguments>
+    <Description>Record Size: 64Kb - File Size: 8GB - Disk Test: Read Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 1m -s 512M -i0 #WRITE</Arguments>
+    <Description>Record Size: 1MB - File Size: 512MB - Disk Test: Write Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 1m -s 512M -i0 -i1 #READ</Arguments>
+    <Description>Record Size: 1MB - File Size: 512MB - Disk Test: Read Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 1m -s 2048M -i0 #WRITE</Arguments>
+    <Description>Record Size: 1MB - File Size: 2GB - Disk Test: Write Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 1m -s 2048M -i0 -i1 #READ</Arguments>
+    <Description>Record Size: 1MB - File Size: 2GB - Disk Test: Read Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 1m -s 4096M -i0 #WRITE</Arguments>
+    <Description>Record Size: 1MB - File Size: 4GB - Disk Test: Write Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 1m -s 4096M -i0 -i1 #READ</Arguments>
+    <Description>Record Size: 1MB - File Size: 4GB - Disk Test: Read Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 1m -s 8192M -i0 #WRITE</Arguments>
+    <Description>Record Size: 1MB - File Size: 8GB - Disk Test: Write Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/iozone-1.9.0</Test>
+    <Arguments>-r 1m -s 8192M -i0 -i1 #READ</Arguments>
+    <Description>Record Size: 1MB - File Size: 8GB - Disk Test: Read Performance</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/network-loopback-1.0.1</Test>
+    <Arguments></Arguments>
+    <Description></Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/ramspeed-1.4.0</Test>
+    <Arguments>COPY -b 3</Arguments>
+    <Description>Type: Copy - Benchmark: Integer</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/ramspeed-1.4.0</Test>
+    <Arguments>SCALE -b 3</Arguments>
+    <Description>Type: Scale - Benchmark: Integer</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/ramspeed-1.4.0</Test>
+    <Arguments>ADD -b 3</Arguments>
+    <Description>Type: Add - Benchmark: Integer</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/ramspeed-1.4.0</Test>
+    <Arguments>TRIAD -b 3</Arguments>
+    <Description>Type: Triad - Benchmark: Integer</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+  <Execute>
+    <Test>pts/ramspeed-1.4.0</Test>
+    <Arguments>AVERAGE -b 3</Arguments>
+    <Description>Type: Average - Benchmark: Integer</Description>
+    <OverrideTestOptions></OverrideTestOptions>
+  </Execute>
+</PhoronixTestSuite>
