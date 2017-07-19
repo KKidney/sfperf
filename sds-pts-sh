@@ -1,0 +1,67 @@
+#! /bin/bash
+
+#make sure that are running from the home directory
+if [[ $PWD != $HOME ]]; then
+    echo "Run from $HOME"
+    exit 1
+fi
+ 
+#if phoronix test suite is already installed, don't install it...
+commandline=$(type -t phoronix-test-suite)
+if [[ ! $commandline ]]; then
+    #install the needed packages
+    apt-get install -y php-cli php-xml php-gd
+
+    filelocation=http://www.phoronix-test-suite.com/
+    filename=download.php?file=phoronix-test-suite-7.2.1
+
+    if [[ -e "$filename" ]]; then
+	echo "File $filename already exists"
+	exit 1
+    fi
+
+    #see if wget exists. If not, install it
+    wgetcheck=$(type -t wget)
+    if [[ ! $wgetcheck ]]; then
+	apt-get install -y wget
+    fi
+
+    #get the pts file
+    wget "${filelocation}"/"${filename}"
+ 
+    #unzip and install it
+    tar zxf "${filename}"
+
+    cd phoronix-test-suite
+    ./install-sh
+fi
+ 
+# run the program so that it creates the test dir structure
+echo "Wait while phoronix builds the test directory structure..."
+./phoronix-test-suite list-installed-suites
+
+# make sure that the phoronix directory structure exist
+testdir=/var/lib/phoronix-test-suite/test-suites/local
+if [[ ! -d "$testdir" ]]; then
+    echo "$testdir does not exist"
+    exit 1
+fi
+
+#if needed, move the test suite to the proper location
+suitedir=sfperf
+suitepath="${testdir}/${suitedir}"
+mkdir "$suitepath"
+suitefile=suite-definition.xml
+
+# if it's already there, don't do anything
+if [[ -e "${suitepath}"/"${suitefile}" ]]; then
+    exit 0
+else
+    echo "Moving $suitefile to $suitepath"
+    cp ${HOME}/sds-pts/suite-definition.xml "$suitepath"
+fi
+
+echo "Run \"phoronix-test-suite benchmark $suitedir\" to kick off the test"
+
+exit 0
+
